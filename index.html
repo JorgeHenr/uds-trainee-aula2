@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>uds trainee aula 2</title>
+  </head>
+  <body>
+    <script>
+      var nome = 'Jorge Henrque Carvalho';
+      var idade = 21;
+      var sexoFeminino = false;
+      var peso = 71.22;
+      alert ('Olá, seu nome é '+ nome +' voce tem ' + idade + ' anos!');
+      if (idade <= 18) {
+        alert ( 'novinho' );
+      } else if (idade >= 30){
+        alert ('tiozao')
+      } else {
+       alert ( 'tiozinho' );
+      }
+      var data = new Date().getDay();
+      switch (data) {
+        case 0:
+          console.log('domingo')
+          break;
+        case 1:
+          console.log('segunda')
+          break;
+        case 2:
+          console.log('terça')
+          break;
+        case 3:
+          console.log('quarta')
+          break;
+        case 4:
+          console.log('quinta')
+          break;
+        case 5:
+          console.log('sexta')
+          break;
+        case 6:
+          console.log('sábado')
+          break;
+      }
+      function converterParaRomanos (decimal) {
+
+        switch (decimal) {
+          case 1:
+            return 'I'
+          case 2:
+            return 'II'
+          case 3:
+            return 'III'
+          case 4:
+            return 'IV'
+          case 5:
+            return 'V'
+          case 6:
+            return 'VI'
+          case 7:
+            return 'VII'
+          case 8:
+            return 'VIII'
+          case 9:
+            return 'IX'
+          case 10:
+            return 'X'
+          default:
+            return 'valor invalido';
+        }
+      }
+        var decimal = prompt('digite um numero');
+          decimal=parseInt(decimal);
+          alert(converterParaRomanos(decimal));
+          for (var i = 10 ; i >= 0 ; i--) {
+            converterParaRomanos(i);
+            console.log(converterParaRomanos(i));
+      }
+        var contador = 10;
+          while (contador >=1 ) {
+            console.log(converterParaRomanos(contador));
+            contador--;
+      }
+      var meuArray = [];
+      var nome ='Jorge';
+      meuArray.push(nome);
+      var endereço = [];
+      var cep = '87045-666';
+      endereço.push(cep);
+      var numero = '024';
+      endereço.push(numero);
+      var complemento = 'sobrado';
+      endereço.push(complemento);
+      var bairro ='jardim oito';
+      endereço.push(bairro);
+      var cidade = 'Maringa';
+      endereço.push(cidade);
+      var estado = 'Parana';
+      meuArray.push(endereço);
+      endereço.push(estado);
+      var telefone = '44-3542-4584';
+      meuArray.push(telefone);
+      meuArray [0] = 'Jorge Henrique Ribeiro de Carvalho';
+      meuArray.splice(2,1);
+      console.log(meuArray);
+      console.log(endereço);
+
+      var pessoa = {
+        nome :'Jorge',
+        sobreNome :'Carvalho',
+        endereço:{
+          cep:'87045-666',
+          rua:'dos bobos',
+          numero:'0',
+          complemento:'casa engraçada',
+          bairro:'N/A',
+          cidade:'Neverland',
+          estado:'Não se sabe',
+        },
+        mostrarMinhasInformaçoes: function (){
+          return this.nome + ' ' + this.sobreNome;
+        }
+      }
+      console.log(pessoa.alert());
+    </script>
+  </body>
+</html>
